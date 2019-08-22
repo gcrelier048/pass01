@@ -1,0 +1,31 @@
+<?php
+function provide_pass($tam, $upper, $low, $num, $csymb){
+  $ma = "ABCDEFGHIJKLMNOPQRSTUVYXWZ"; // $ma upper
+  $mi = "abcdefghijklmnopqrstuvyxwz"; // $mi lower
+  $nu = "0123456789"; // $nu num
+  $si = "!@#$%¨&*()_+="; // $si csymb
+ 
+  if ($upper){
+     
+        $passc .= str_shuffle($ma);
+  }
+ 
+    if ($low){
+       
+        $passc .= str_shuffle($mi);
+    }
+ 
+    if ($num){
+        
+        $passc .= str_shuffle($nu);
+    }
+ 
+    if ($csymb){
+        
+        $passc .= str_shuffle($si);
+    }
+ 
+    
+    return substr(str_shuffle($pass),0,$tam);
+}
+?>
